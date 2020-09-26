@@ -18,3 +18,4 @@ Due to the current pandemic, there is a lot to be learned from the spread of vir
 
 An example of food fad is Dalgona coffee induced by the isolation during COVID-19. As per Youtube searches on Google Trends~\cite{google}, \emph{“How to make Dalgona coffee”} has become the most searched type of coffee recipe worldwide. As shown in Figure~\ref{fig:dalgona}, searches worldwide for Dalgona coffee recipe peaked in mid-April and declined by the end of April.
 
+Another example of a food fad was the increase in popularity of Kale. It was coined as “superfood” and is found now as chips or in salads. From Figure~\ref{fig:kale}, it can be seen that Kale became very popular in the United States in mid-2014 when young-adults where being drawn to a more health-conscious diet. It is now slowly declining, and its popularity is reduced by half since 2014.

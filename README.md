@@ -8,53 +8,57 @@ Topics such as cancer, pandemics, mortality can distract the listener from the k
 
 # Background 
 
-Traditionally, machine learning has been used for cancer diagnoses, climate change, classifying a virus, and other grim topics. For example, here is a paper~\cite{IEEEexample:brecan} on a Comparison of Machine Learning algorithms on breast cancer diagnosis. They have applied popular machine learning techniques to classify Wisconsin Breast Cancer dataset~\cite{uci}, and the classification performance of methods was compared with each other using accuracy, precision, recall, and ROC Area. The Support Vector Machines obtained the best performance with the highest accuracy. 
-
-An example of climate change in Machine learning is this paper~\cite{IEEEexample:5406743}. The authors of this paper derive a hierarchical cohort of high-risk senior citizens, outpatients, clusters, and proactively deliver population health insights and timely health services through alerting governmental and non-governmental agencies. This system is developed using Apriori, Naive Bayesian, and artificial intelligence algorithms. 
-
-In this paper~\cite{IEEEexample:5510726}, the authors used artificial neural networks for the prediction of important influenza virus antigenic types and the hosts, to create a computational system for influenza surveillance. They found that the accuracy of classification can vary based on the host and gene segment. Compared to virus such avian and swine flu, human viruses can be classified with a higher accuracy. This indicates that human viruses have adapted to their human hosts. All of these results show that Data Science can save lives. While these topics are incredibly important, it can be difficult for a student in a learning environment. 
-
 Due to the current pandemic, there is a lot to be learned from the spread of viruses such as modeling viral spreading, exponential growth, and geometric decay. However, obviously, many people find it disturbing to talk about the virus because of the mortality rate associated with it. Instead of talking about a virus such as COVID-19, we can talk about food trends or fads. Fads can behave like a virus. They have a quick rise and steep decline in a short amount of time. Here are two or three food fads that demonstrate this. The following examples are based on the presumption that when someone searches on a topic that they are interested in it.
 
-An example of food fad is Dalgona coffee induced by the isolation during COVID-19. As per Youtube searches on Google Trends~\cite{google}, \emph{“How to make Dalgona coffee”} has become the most searched type of coffee recipe worldwide. As shown in Figure~\ref{fig:dalgona}, searches worldwide for Dalgona coffee recipe peaked in mid-April and declined by the end of April.
+An example of food fad is Dalgona coffee induced by the isolation during COVID-19. As per Youtube searches on Google Trends~\cite{google}, \emph{“How to make Dalgona coffee”} has become the most searched type of coffee recipe worldwide. As shown in Figure below, searches worldwide for Dalgona coffee recipe peaked in mid-April and declined by the end of April.
+![Interest in Dalgona Coffee over time](/images/dalgona.png)
 
-Another example of a food fad was the increase in popularity of Kale. It was coined as “superfood” and is found now as chips or in salads. From Figure~\ref{fig:kale}, it can be seen that Kale became very popular in the United States in mid-2014 when young-adults where being drawn to a more health-conscious diet. It is now slowly declining, and its popularity is reduced by half since 2014.
+Another example of a food fad was the increase in popularity of Kale. It was coined as “superfood” and is found now as chips or in salads. From Figure below, it can be seen that Kale became very popular in the United States in mid-2014 when young-adults where being drawn to a more health-conscious diet. It is now slowly declining, and its popularity is reduced by half since 2014.
 ![Interest in Kale over time](/images/kale.png)
 
-A traditional Japanese tea, Matcha, has been gaining a lot of popularity lately as well. Matcha has become attractive to millennials because of green color of the drink being aesthetically pleasing as well the health benefits such as weight loss. In Figure~\ref{fig:matcha}, it can be seen how the popularity of Matcha has been increasing over the last few years, even though it has been around since the 7th Century.
+A traditional Japanese tea, Matcha, has been gaining a lot of popularity lately as well. Matcha has become attractive to millennials because of green color of the drink being aesthetically pleasing as well the health benefits such as weight loss. In Figure below, it can be seen how the popularity of Matcha has been increasing over the last few years, even though it has been around since the 7th Century.
+
+![Interest in matcha over time](/images/matcha.png)
 
 # Survey
 
 To validate our belief, we conducted a survey in which we asked the students various questions about their topic preferences when learning Data Science. They were questioned whether they would prefer learning about food topics or cancer, food or pandemics, and food or climate change. 
 
-Using Weka, K means was performed on data collected, and on analysis, three clusters were found. From Table~\ref{weka}, we can see the information generated by Weka. If the value in the table is zero or closer to zero, it indicates that the preference is not food. If the value is closer to 1 or 1, the preference is food. It shows that there are 43\% of students in the class who are comfortable talking about grim topics as data science can be used to save lives. Also, it can be seen that 26\% of the students do not want to talk about morbid topics and it can cause communication and learning blocks in these students. The rest of the students were neural in their preference.
+Using Weka, K means was performed on data collected, and on analysis, three clusters were found. From Table below, we can see the information generated by Weka. If the value in the table is zero or closer to zero, it indicates that the preference is not food. If the value is closer to 1 or 1, the preference is food. It shows that there are 43% of students in the class who are comfortable talking about grim topics as data science can be used to save lives. Also, it can be seen that 26% of the students do not want to talk about morbid topics and it can cause communication and learning blocks in these students. The rest of the students were neural in their preference.
 
-The above information tells us that there is a mixture model of students in the class. While some have a morbid curiosity, others prefer not to talk about grim topics. Also, from Figure~\ref{fig:pie}, we can observe that most students like food. In order to include the 26\% of the students and promote learning without any communication block, data science should be taught with topics such as food. Thus, proving our original hypothesis. 
+Attribute | Cluster 0 | Cluster 1 | Cluster 2 
+--------- | --------- |-----------| ---------
+Food over Biological Processes | 0 | 0.9 | 1
+Food over Pandemics or Epidemics | 0.03 | 1 | 0
+
+The above information tells us that there is a mixture model of students in the class. While some have a morbid curiosity, others prefer not to talk about grim topics. Also, from Figure below, we can observe that most students like food. In order to include the 26% of the students and promote learning without any communication block, data science should be taught with topics such as food. Thus, proving our original hypothesis. 
+
+![Food Preference](/images/pie.png)
 
 # Example Machine Learning Algorithms using Food
 
 ## Background on Gradient Descent
-Gradient Descent is an iterative optimization algorithm that takes more significant steps where the amount of gradient is higher or moves in the direction of steepest descent. It is used to find the parameters of a model in machine learning algorithms such as Logistic Regression, SVM, etc. An analogy for gradient descent would be a ball rolling down a hill. The ball would initially roll down faster till it slows down when it is about to reach a dip similar to the one shown in Figure~\ref{fig:gradient}. The goal of gradient descent is finding this \emph{dip}, known as the local minimum. The first step is to initialize a starting point. Then steps are taken in path of the greatest descent. The rate at which these \emph{steps} are taken is called the learning rate. \newline
+Gradient Descent is an iterative optimization algorithm that takes more significant steps where the amount of gradient is higher or moves in the direction of steepest descent. It is used to find the parameters of a model in machine learning algorithms such as Logistic Regression, SVM, etc. An analogy for gradient descent would be a ball rolling down a hill. The ball would initially roll down faster till it slows down when it is about to reach a dip. The goal of gradient descent is finding this *dip*, known as the local minimum. The first step is to initialize a starting point. Then steps are taken in path of the greatest descent. The rate at which these *steps* are taken is called the learning rate. 
 The two parameters required are -
-\begin{itemize}
-    \item Learning Rate: It is used to control the change in each coefficient. It should not be too high as it is possible to jump over the bottom, and if it too low, then the algorithm takes a longer time to run.
-    \item Epochs: The number of iterations that need to be performed. This amount can vary from dataset to dataset.
-\end{itemize}
+- Learning Rate: It is used to control the change in each coefficient. It should not be too high as it is possible to jump over the bottom, and if it too low, then the algorithm takes a longer time to run.
+- Epochs: The number of iterations that need to be performed. This amount can vary from dataset to dataset.
 
-The Gradient Descent calculated also depends on the cost function. The cost function tells how \emph{good} the model is. The two parameters of the cost function are weight and bias. The slope of the cost function informs on how to update the parameters. Notice that the shape of the bowl in Figure~\ref{fig:gradient}, it shows that gradient descent is a convex function. 
+The Gradient Descent calculated also depends on the cost function. The cost function tells how *good* the model is. The two parameters of the cost function are weight and bias. The slope of the cost function informs on how to update the parameters.
 
 ## Grid Search
 Similar to Gradient Descent, we can use as Grid Search as well to find parameters.  In a grid search, a rough set of all parameters is tried. Then, once a global best fit is found, the parameters in that region are iteratively changed to improve the fit to the local model, and the precision of the model.
-Figure~\ref{fig:coffee} a SIR (Susceptible-Infected-and-Recovered) model~\cite{fad2020} is used to predict Dangola coffee. 
+Figure below a SIR (Susceptible-Infected-and-Recovered) model is used to predict Dangola coffee. 
 
-Before getting into Logistic Regression, it is vital to understand the concept of Odds and Odds Ratio. Odds are the ratio of success to the ratio of failure. The range of odds can be in the range of 0 to $\infty$. 
-If we take a natural logarithm of such numbers, for a number $x\geq0$, $\log(x)$ is in the range of $[-\infty,\infty]$.  Odds ratios, as the name suggests, is a ratio of odds. The odds ratio can vary between 0 to positive infinity, $\log (Odds Ratio)$ can vary between $[-\infty,\infty]$. Specifically, when the odds ratio lies between $[0,1]$, $\log (Odds Ratio)$ is negative.
+![Grid Search](/images/coffee.png)
+
+Before getting into Logistic Regression, it is vital to understand the concept of Odds and Odds Ratio. Odds are the ratio of success to the ratio of failure. The range of odds can be in the range of 0 to infinity. 
+If we take a natural logarithm of such numbers, for a number $x\geq0$, $\log(x)$ is in the range of [-infinity, infinity].  Odds ratios, as the name suggests, is a ratio of odds. The odds ratio can vary between 0 to positive infinity, $\log (Odds Ratio)$ can vary between [-infinity,infinity]. Specifically, when the odds ratio lies between [0,1], log(Odds Ratio) is negative.
 
 ## Logistic Regression
 
-The term logistic regression is confusing as it is neither logical nor a typical regression. Logistic regression is a statistical classification method for predicting binary cases, i.e., the target class is either 1 or 0. To explain it better, we are using data on popcorn to predict two scenarios: if the popcorn is cooked or not, and if the popcorn is burnt or not. If the popcorn is cooked, then the target class is 1, and if uncooked, it is 0. Since the values predicted by logistic regression are binary, they are mainly used for classification purposes. However, the output of logistic regression, is the probability of the prediction i.e values are in the range of 0 to 1. This is used to find how similar the predicted value is to the expected value. It is assumed that all values above 0.5 belong to Class 1, and all values below 0.5 belong to Class 0. Here, we are trying to classify for a given time in seconds, what is the probability that the popcorn is cooked. Suppose value for x1 value is probable to 0.8, then there is an 80\% probability that it is cooked. 
+The term logistic regression is confusing as it is neither logical nor a typical regression. Logistic regression is a statistical classification method for predicting binary cases, i.e., the target class is either 1 or 0. To explain it better, we are using data on popcorn to predict two scenarios: if the popcorn is cooked or not, and if the popcorn is burnt or not. If the popcorn is cooked, then the target class is 1, and if uncooked, it is 0. Since the values predicted by logistic regression are binary, they are mainly used for classification purposes. However, the output of logistic regression, is the probability of the prediction i.e values are in the range of 0 to 1. This is used to find how similar the predicted value is to the expected value. It is assumed that all values above 0.5 belong to Class 1, and all values below 0.5 belong to Class 0. Here, we are trying to classify for a given time in seconds, what is the probability that the popcorn is cooked. Suppose value for x1 value is probable to 0.8, then there is an 80% probability that it is cooked. 
 
-As the values that need to be predicted by logistic regression should be in the range of 0 to 1, we use sigmoid function. Here \emph{w} is the weight, and \emph{b} is a bias.
+As the values that need to be predicted by logistic regression should be in the range of 0 to 1, we use sigmoid function. Here *w* is the weight, and *b* is a bias.
 
 \[
 \ h_{w,b}\left(x\right)=\frac{1}{1+e^{-{(w}^\top.x+b)}}
@@ -91,10 +95,8 @@ Figure~\ref{fig:alog} shows the result of logistic regression on popcorn data. T
 ## Support Vector Machines
 Support Vector Machines are a supervised machine learning algorithm that is used to make binary classification. The SVM algorithm tries to find a decision boundary using support vectors that separates the data such that on the side lies one category, and on the other side lies the other category. These decision boundaries are called Hyperplanes. There can  be  multiple  hyperplanes  that  separate  the  data,  but  the ideal one should satisfy the following conditions:
 
-\begin{itemize}
-    \item It creates divide between the classes with a maximum margin.
-    \item Its equation generates a value greater than 1.
-\end{itemize}
+- It creates divide between the classes with a maximum margin.
+- item Its equation generates a value greater than 1.
 
 Hyperplanes ensures that future data is classified with more confidence. The data points that are closest to the hyperplane are support vectors. They can change the orientation or maximize the margin between the hyperplane and the data points. 
 The hyperplane can be found by finding ideal parameters, \emph{weight} and \emph{bias} by minimizing the cost function. The cost function~\cite{zha_2019} is 
@@ -118,16 +120,14 @@ Consider the graph in Figure~\ref{fig:svm}; here SVM is used to determine if a g
 
 K means is a clustering algorithm; a clustering algorithm divides the data into subgroups where a point in a subgroup is similar to other points in that subgroup. This similarity is found using distance metrics such as Euclidean distance. Unlike the supervised methods mentioned above, clustering is unsupervised.
 K means is an iterative method that divides the data into \emph{k} pre-defined cluster/subgroups, where each point in data belongs to exactly one cluster. Each cluster has a center called centroid: it is the average of all the points in the cluster. Once centroid is initialized, points are assigned to each cluster such that the sum of squared distance between all points in that cluster and center is at a minimum. The center is re-calculated, and this process is repeated iteratively till the center of the clusters stops changing. The algorithm in steps:
-\begin{enumerate}
-    \item Specify \emph{k}.
-    \item Initialize the centroids and assign points to the closest cluster.
-    \item Keep iterating till the center of the cluster stops changing, or a seed limit is reached.
-    \item Compute the sum of squared distance between the center and all data points.
-    \item Assign points to the closest center.
-    \item Compute the center.
-\end{enumerate}
+- Specify *k*.
+- Initialize the centroids and assign points to the closest cluster.
+- Keep iterating till the center of the cluster stops changing, or a seed limit is reached.
+- Compute the sum of squared distance between the center and all data points.
+- Assign points to the closest center.
+- Compute the center.
 
-It is essential to select the correct \emph{k} to get homogeneous clusters. A \emph{knee} graph (some call it an elbow curve) can be plotted to find the ideal \emph{k}. The idea is to find the sum of squared error for a range of k values and then plot the sum of squared error for each value of k. The ideal \emph{k} is point right after which there is a steady, almost linear decrease in the graph. Observe, Figure~\ref{fig:knee}, notice that six is ideal \emph{k}. Here, K means was used to do market basket analysis. The data consist of different shoppers that buy items from a store. The goal is to find the food groups that the shoppers belong to, such as keto, vegan, gluten-free, etc. Based on Figure~\ref{fig:knee}, we see six groups emerge. 
+It is essential to select the correct *k* to get homogeneous clusters. A *knee* graph (some call it an elbow curve) can be plotted to find the ideal *k*. The idea is to find the sum of squared error for a range of k values and then plot the sum of squared error for each value of k. The ideal *k* is point right after which there is a steady, almost linear decrease in the graph. Observe, Figure~\ref{fig:knee}, notice that six is ideal *k*. Here, K means was used to do market basket analysis. The data consist of different shoppers that buy items from a store. The goal is to find the food groups that the shoppers belong to, such as keto, vegan, gluten-free, etc. Based on Figure~\ref{fig:knee}, we see six groups emerge. 
 
 \begin{figure}[!t]
 \centering
@@ -138,12 +138,10 @@ It is essential to select the correct \emph{k} to get homogeneous clusters. A \e
 
 ## Agglomeration
 Agglomeration or agglomerative clustering is a bottom-up approach to hierarchical clustering. Here, each point in the data is considered as an individual cluster and merged until there is only one cluster. One of the key decisions is to choose a linkage. It is required to determine distance between the points. Different types of linkage are the ward’s method, complete linkage, single linkage, and average linkage. Another decision is to select the metric to calculate the linkage. It is usually a Euclidean distance. Agglomeration algorithm is as follows:
-\begin{enumerate}
-    \item Compute the distance between each data point.
-    \item Each data point is its own cluster at the start.
-    \item Merge two closest clusters and re-compute the distance.
-    \item Repeat the previous step till all the clusters are merged into one.
-\end{enumerate}
+- Compute the distance between each data point.
+- Each data point is its own cluster at the start.
+- Merge two closest clusters and re-compute the distance.
+- Repeat the previous step till all the clusters are merged into one.
 
 Dendrograms help understand agglomeration in a much better and more visual way. It shows in a static way how the aggregations are performed or how each cluster is joined together until there is only cluster left. The height of the dendrogram indicates the order in which the clusters were joined, and it can also be used to determine how far apart each cluster is. The more the height before joining, the further apart they are. Dendrograms can also be used to find the number of clusters by cutting it by drawing a horizontal line across it.  It is important to know where to cut the line. The line must be cut where the difference is most significant, or clusters are far apart—this line when drawn across dendrogram cut lines in the dendrogram. The number of lines it cuts is the number of clusters. 
 
@@ -155,17 +153,15 @@ Dendrograms help understand agglomeration in a much better and more visual way. 
 \end{figure}
 
 When deciding between K means or Hierarchical clustering, usually, Hierarchical Clustering is preferable. It is because Hierarchical clustering has fewer hidden assumptions about the distribution of data.  
-With K means clustering, the desired number of clusters should be known. Also, k-means will often give unintuitive results if the data is not well-separated into sphere-like clusters, \emph{k} picked is not well-suited to the shape of the data or initial values for the cluster centroids are weird.
+With K means clustering, the desired number of clusters should be known. Also, k-means will often give unintuitive results if the data is not well-separated into sphere-like clusters, *k* picked is not well-suited to the shape of the data or initial values for the cluster centroids are weird.
 
 The only requirement (which k-means also shares) of hierarchical clustering is that a distance has to be calculated between each pair of data points. Hierarchical clustering typically joins nearby points into a cluster, and then successively adds nearby points to the nearest group. A dendrogram can be used to decide how many clusters your data has, by cutting the dendrogram at different heights. Of course, it has to be pre-decided on how many clusters one wants.
 
 ## Artifical Neural networks
 Artificial Neural Networks is a computational model that has a similar structure of the neural network of a human brain. Like in the human brain, there is a neuron called a node. There can be multiple layers in the network. The node in one layer is connected to all the nodes in the subsequent layer. The signal in this network flows from left to right. The node, when given an input, implements a function and forwards the output to the next layer. Each input is given a weight. This weight depends on the significance of the input. The resulting output is generated after all the nodes complete the above process. There are various kinds of neural networks, but the most commonly used ones
 are:
-\begin{enumerate}
-    \item Feedforward
-    \item Recurrent
-\end{enumerate}
+- Feedforward
+- Recurrent
 
 
 Artificial Neural Network is used to find the classification between muffins and cupcakes. It similarly classifies the data as Support Vector Machines but takes slightly longer. This shows that we should not use ANN unless it is required, and it better to go with the more straightforward option of SVM (Occam’s Razor). 

@@ -91,6 +91,8 @@ Once the lowest cost is reached, the final coefficients can be used to make pred
 
 Figure~\ref{fig:alog} shows the result of logistic regression on popcorn data. The blue sigmoidal curve is for the cooked data, and the orange is for burnt data.  Two logistic regression curves can be used to give a clever function. This is what artificial neurons do. A delta function can be drawn between the two curves. Using the delta function, any curve can be generated. This is why artificial neural networks can be used as a universal approximator.
 
+![Logistic Regression](/images/log.png)
+
 
 ## Support Vector Machines
 Support Vector Machines are a supervised machine learning algorithm that is used to make binary classification. The SVM algorithm tries to find a decision boundary using support vectors that separates the data such that on the side lies one category, and on the other side lies the other category. These decision boundaries are called Hyperplanes. There can  be  multiple  hyperplanes  that  separate  the  data,  but  the ideal one should satisfy the following conditions:

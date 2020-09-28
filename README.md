@@ -118,6 +118,8 @@ We can minimize the cost function by minimizing $||w||^2$, which minimizes the m
 
 Consider the graph in Figure~\ref{fig:svm}; here SVM is used to determine if a given recipe is that of a cupcake or a muffin. The features used are the amount of Sugar and Flour in a recipe. The prediction is labeled as 0 and 1 for Muffin and Cupcake respectively. The accuracy of the model resulted was 1.0. And the ideal hyperplane is the one shown in Figure~\ref{fig:svm}.
 
+![Support Vector Machines](/images/svm.png)
+
 ## K means
 
 K means is a clustering algorithm; a clustering algorithm divides the data into subgroups where a point in a subgroup is similar to other points in that subgroup. This similarity is found using distance metrics such as Euclidean distance. Unlike the supervised methods mentioned above, clustering is unsupervised.
@@ -131,12 +133,7 @@ K means is an iterative method that divides the data into \emph{k} pre-defined c
 
 It is essential to select the correct *k* to get homogeneous clusters. A *knee* graph (some call it an elbow curve) can be plotted to find the ideal *k*. The idea is to find the sum of squared error for a range of k values and then plot the sum of squared error for each value of k. The ideal *k* is point right after which there is a steady, almost linear decrease in the graph. Observe, Figure~\ref{fig:knee}, notice that six is ideal *k*. Here, K means was used to do market basket analysis. The data consist of different shoppers that buy items from a store. The goal is to find the food groups that the shoppers belong to, such as keto, vegan, gluten-free, etc. Based on Figure~\ref{fig:knee}, we see six groups emerge. 
 
-\begin{figure}[!t]
-\centering
-\includegraphics[width=3.0in]{knee}
-\caption{Inflection point detection used to find optimal value of \emph{k}. The inflection point is the point of diminishing returns. The optimal \emph{k} is 6 for Market Basket Analysis.}
-\label{fig:knee}
-\end{figure}
+![Knee Graph](/images/knee.png)
 
 ## Agglomeration
 Agglomeration or agglomerative clustering is a bottom-up approach to hierarchical clustering. Here, each point in the data is considered as an individual cluster and merged until there is only one cluster. One of the key decisions is to choose a linkage. It is required to determine distance between the points. Different types of linkage are the ward’s method, complete linkage, single linkage, and average linkage. Another decision is to select the metric to calculate the linkage. It is usually a Euclidean distance. Agglomeration algorithm is as follows:
@@ -147,12 +144,7 @@ Agglomeration or agglomerative clustering is a bottom-up approach to hierarchica
 
 Dendrograms help understand agglomeration in a much better and more visual way. It shows in a static way how the aggregations are performed or how each cluster is joined together until there is only cluster left. The height of the dendrogram indicates the order in which the clusters were joined, and it can also be used to determine how far apart each cluster is. The more the height before joining, the further apart they are. Dendrograms can also be used to find the number of clusters by cutting it by drawing a horizontal line across it.  It is important to know where to cut the line. The line must be cut where the difference is most significant, or clusters are far apart—this line when drawn across dendrogram cut lines in the dendrogram. The number of lines it cuts is the number of clusters. 
 
-\begin{figure}[!t]
-\centering
-\includegraphics[width=3.0in]{agg}
-\caption{The dendrogram for Market Basket Analysis, truncated to show the last 10 merges. The lower leftmost merges are difficult to discern.}
-\label{fig:agg}
-\end{figure}
+![Dendogram](/images/agg.png)
 
 When deciding between K means or Hierarchical clustering, usually, Hierarchical Clustering is preferable. It is because Hierarchical clustering has fewer hidden assumptions about the distribution of data.  
 With K means clustering, the desired number of clusters should be known. Also, k-means will often give unintuitive results if the data is not well-separated into sphere-like clusters, *k* picked is not well-suited to the shape of the data or initial values for the cluster centroids are weird.
